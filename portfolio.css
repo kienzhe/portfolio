@@ -9,17 +9,12 @@ body{
   height: auto;
   background-color: grey;
   display: grid;
-  grid-template-columns: 4fr;
+  grid-template-columns: 3fr;
   grid-template-areas:
   "header"
   "content"
   "footer ";
   grid-template-rows: 80px 1000px 200px;
-}
-
-@viewport{
-  zoom: 1.0;
-  width: extend-to-zoom;
 }
 
 .header{
@@ -50,7 +45,6 @@ body{
 
 .header ul li{
   width: 100%;
-
 }
 
 .header ul li a:hover{
@@ -76,7 +70,7 @@ body{
 
 .move{
   position: relative;
-  left: 18%;
+  left: 20%;
 }
 
 .slide img{
@@ -86,6 +80,13 @@ body{
   animation: slide 25s infinite;
   opacity: 0%;
 }
+
+@keyframes slide{25%{opacity:1;} 40%{opacity:0;}}
+ .slide img:nth-child(1) {animation-delay:0s;}
+ .slide img:nth-child(2) {animation-delay:5s;}
+ .slide img:nth-child(3) {animation-delay:10s;}
+ .slide img:nth-child(4) {animation-delay:15s;}
+ .slide img:nth-child(5) {animation-delay:20s;}
 
 .recently{
   width: 100%;
@@ -111,17 +112,20 @@ body{
   left: 13%;
 }
 
-@keyframes slide{25%{opacity:1;} 40%{opacity:0;}}
-.slide img:nth-child(1) {animation-delay:0s;}
-.slide img:nth-child(2) {animation-delay:5s;}
-.slide img:nth-child(3) {animation-delay:10s;}
-.slide img:nth-child(4) {animation-delay:15s;}
-.slide img:nth-child(5) {animation-delay:20s;}
-
-
 .footer{
   grid-area: footer;
   background-image: linear-gradient(black, blue);
+}
+
+.info{
+  position: relative;
+  float: right;
+  right: 16%;
+  top: 16%;
+}
+
+h3{
+  color: white;
 }
 
 /*about me page*/
@@ -258,8 +262,8 @@ video{
  top: 5%;
 }
 
- .slide img{
-   width: 63%;
+.slide img{
+  width: 63%;
 }
 
 .recently{
@@ -288,10 +292,10 @@ video{
   left: 0%;
 }
 
- .header a{
-   width: 59%;
-   position: relative;
-   font-size: 23px;
+.header a{
+  width: 59%;
+  position: relative;
+  font-size: 23px;
  }
 
 .illustration{
@@ -365,14 +369,14 @@ video{
 }
 
 @media screen and (max-width: 768px) {
- .slide{
- height: 400px;
- position: relative;
- top: 5%;
+.slide{
+  height: 400px;
+  position: relative;
+  top: 5%;
 }
 
- .slide img{
- height: 400px;
+.slide img{
+  height: 400px;
 }
 
 .recently{
@@ -400,10 +404,10 @@ video{
   left: 0%;
 }
 
- .header a{
-   width: 59%;
-   position: relative;
-   font-size: 23px;
+.header a{
+  width: 59%;
+  position: relative;
+  font-size: 23px;
  }
 
 .illustration{
@@ -477,14 +481,14 @@ video{
 }
 
 @media screen and (max-width: 616px) {
- .slide{
- height: 400px;
- position: relative;
- top: 5%;
+.slide{
+  height: 400px;
+  position: relative;
+  top: 5%;
 }
 
- .slide img{
- height: 400px;
+.slide img{
+  height: 400px;
 }
 
 .recently{
@@ -513,9 +517,9 @@ video{
 }
 
  .header a{
-   width: 59%;
-   position: relative;
-   font-size: 23px;
+  width: 59%;
+  position: relative;
+  font-size: 23px;
  }
 
 .illustration{
@@ -588,18 +592,18 @@ video{
 }
 }
 
-@media screen and (max-width: 400px and max-height 812px) {
- .wrapper{
-    width: 100%;
-    height: auto;
-    background-color: grey;
-    display: grid;
-    grid-template-columns: 4fr;
-    grid-template-areas:
-    "header"
-    "content"
-    "footer ";
-    grid-template-rows: 80px 2050px 200px;
+@media screen and (max-width: 500px) {
+.wrapper{
+  width: 100%;
+  height: auto;
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-template-areas:
+  "header"
+  "content"
+  "footer ";
+  grid-template-rows: 80px 2050px 200px;
   }
 
 .slide{
@@ -648,15 +652,15 @@ video{
   left: 0%;
 }
 
- .header a{
-   position: relative;
-   font-size: 14px;
+.header a{
+  position: relative;
+  font-size: 14px;
  }
 
 .header ul{
-   width: 78%;
-   position: relative;
-   left: 1%;
+  width: 78%;
+  position: relative;
+  left: 1%;
 }
 
 .illustration{
@@ -777,6 +781,4 @@ video{
 .text p{
   font-size: 18px;
 }
-
-
 }
