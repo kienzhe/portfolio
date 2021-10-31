@@ -1,134 +1,97 @@
-body{
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
-.wrapper{
-  width: 100%;
-  height: auto;
-  background-color: grey;
-  display: grid;
-  grid-template-columns: 3fr;
-  grid-template-areas:
-  "header"
-  "content"
-  "footer ";
-  grid-template-rows: 80px 1000px 200px;
+html, body{
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .header{
-  grid-area: header;
-  background-image: linear-gradient(blue, black);
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-}
+    background-image: linear-gradient(blue, black);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+  }
 
-.header a{
-  text-decoration: none;
-  width: 250px;
-  height: 80px;
-  float: left;
-  position: relative;
-  left: 15%;
-  color: inherit;
-  color: white;
-  font-size: 30px;
-}
+  .header li, a{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    width: 250px;
+    height: 70px;
+    left: 15%;
+    color: white;
+    font-size: 30px;
+  }
 
-.header ul{
-  display: flex;
-  list-style: none;
-}
+  .header ul li a:hover{
+    background-color: black;
+  }
 
-.header ul li{
-  width: 100%;
-}
-
-.header ul li a:hover{
-  background-color: black;
+.wrapper{
+    width: 100%;
+    min-height: 100%;
+    float: left;
+    background-image: url("img/background.jpg");
 }
 
 .content{
-  grid-area: content;
-  background-color: black;
-}
+    overflow: auto;
+    padding-bottom: 100px;
+  }
+  
+  .slide{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+  }
 
-.Recently{
-  color: white;
-  text-align: center;
-}
+  .move{
+    position: relative;
+    left: 20%;
+  }
 
-.slide{
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-}
+  .slide img{
+    width: 60%;
+    height: auto; 
+    animation: slide 25s infinite;
+    opacity: 0%;
+    position: absolute;
+  }
 
-.move{
-  position: relative;
-  left: 20%;
-}
-
-.slide img{
-  width: 100%
-  height:auto;
-  position: absolute;
-  animation: slide 25s infinite;
-  opacity: 0%;
-}
-
-@keyframes slide{25%{opacity:1;} 40%{opacity:0;}}
+  @keyframes slide{25%{opacity:1;} 40%{opacity:0;}}
  .slide img:nth-child(1) {animation-delay:0s;}
  .slide img:nth-child(2) {animation-delay:5s;}
  .slide img:nth-child(3) {animation-delay:10s;}
  .slide img:nth-child(4) {animation-delay:15s;}
  .slide img:nth-child(5) {animation-delay:20s;}
 
-.recently{
-  width: 100%;
-  position: relative;
-  top: 70%;
-}
+ .footer{
+    background-image: linear-gradient(black, blue);
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+    clear: both;
+  }
 
-.recently img{
-  position: relative;
-  left: 29%;
-}
+  .info{
+    position: relative;
+    float: right;
+    right: 4%;
+    top: 30%;
+  }
+  
+  h3{
+    color: white;
+  }
 
-.new{
-  width: 100%;
-  position: relative;
-  top: 70%;
-  float: left;
-}
+/*About me*/
 
-.new img{
-  position:relative;
-  padding-left: 8px;
-  left: 13%;
-}
-
-.footer{
-  grid-area: footer;
-  background-image: linear-gradient(black, blue);
-}
-
-.info{
-  position: relative;
-  float: right;
-  right: 16%;
-  top: 16%;
-}
-
-h3{
-  color: white;
-}
-
-/*about me page*/
 .text{
   width: 70%;
   height: auto;
@@ -136,6 +99,7 @@ h3{
   color: white;
   position: relative;
   left: 15%;
+  margin-top: 90px;
 }
 
 .text h1{
@@ -149,7 +113,8 @@ h3{
 }
 
 .text a{
-  color: inherit;
+  color: blue;
+  font-size: 17px;
 }
 
 .profile{
@@ -158,7 +123,7 @@ h3{
   color: white;
   float: left;
   position: relative;
-  top: 10%;
+  margin-top: 90px;
 }
 
 .profile img{
@@ -166,619 +131,82 @@ h3{
   height: 50%;
 }
 
-/*portfolio page*/
-.illustration{
+/*Portfolio*/
+.choose{
   width: 100%;
+  height: 400px;
+  margin-top: 100px;
 }
 
-.illustration img{
-  position:relative;
-  left: 29%;
-}
-
-.web{
-  width: 100%;
-  height: 20%;
-  position: relative;
-  top: 1%;
-}
-
-.one{
-  width: 100%;
-}
-
-.one img{
-  position: relative;
+.box1{
+  width: 29%;
+  height: 200px;
   float: left;
-  left: 14%;
-  padding-left: 8px;
+  margin-left: 100px;
 }
 
-.photo{
-  width: 100%;
-  position:relative;
-  top: 5%;
+.box2{
+  width: 29%;
+  height: 200px;
+  float: left;
 }
 
-.photo img{
-  position: relative;
-  left: 29%;
+.box3{
+  width: 29%;
+  height: 200px;
+  float: left;
 }
 
+.pic{
+  border-radius: 25%;
+}
+
+/*Portfolio*/
 .picture{
+  overflow: auto;
+  padding-bottom: 100px;
+  margin: 0px 100px 0px;
+}
+
+.gallary{
+  width: 720px;
+  margin: 20px auto 20px;
+}
+
+.gallary img{
   width: 100%;
-  height: 20%;
-  position: relative;
-  top: 6%;
 }
 
-.two{
-  width: 100%;
-}
-
-.two img{
-  position: relative;
-  float: left;
-  left: 14%;
-  padding-left: 8px;
-}
-
-.film{
-  width: 100%;
-  position: relative;
-  top: 9%;
-}
-
-.film img{
-  position: relative;
-  float: left;
-  left: 29%;
+.thumbnail{
+  width: 205px;
+  cursor: pointer;
 }
 
 .video{
-  width: 100%;
-  height: 30%;
-  position: relative;
-  top: 9%;
-}
-
-.three{
-  position: relative;
-  float: left;
-  left: 16%
-}
-
-video{
-  width: 500px;
-  height: 200px;
-  float: left;
-  position: relative;
-}
-
-@media screen and (max-width: 1260px) {
- .slide{
- height: 600px;
- position: relative;
- top: 5%;
-}
-
-.slide img{
-  width: 63%;
-}
-
-.recently{
-  width: 100%;
-  position: relative;
-  top: 5%;
-}
-
-.recently img{
-  width: 59%;
-  position: relative;
-  left: 25%;
-}
-
-.new{
-  width: 100%;
-  position: relative;
-  top: 6%;
-  float: left;
-}
-
-.new img{
-  width: 32%;
-  position:relative;
-  padding-left: 8px;
-  left: 0%;
-}
-
-.header a{
-  width: 59%;
-  position: relative;
-  font-size: 23px;
- }
-
-.illustration{
-  width: 100%;
-}
-
-.illustration img{
-  width: 59%;
-  position: relative;
-  left: 21%;
-}
-
-.one{
-  width: 100%;
-}
-
-.one img{
-  width: 32%;
-  position: relative;
-  left: 0%;
-}
-
-.photo{
-  width: 100%;
-}
-
-.photo img{
-  width: 59%;
-  position: relative;
-  left: 21%;
-}
-
-.two{
-  width: 100%;
-}
-
-.two img{
-  width: 32%;
-  position: relative;
-  left: 0%;
-}
-
-.film{
-  width: 100%;
-}
-
-.film img{
-  width: 59%;
-  position: relative;
-  left: 21%;
-}
-
-.video{
-  width: 100%;
-  position: relative;
-  top: 9%;
-}
-
-video{
-  width: 300px;
-  height: 200px;
-  float: left;
-  position: relative;
-  right: 7%;
-}
-
-.profile{
-  position: relative;
-  top: 15%
-}
-}
-
-@media screen and (max-width: 768px) {
-.slide{
-  height: 400px;
-  position: relative;
-  top: 5%;
-}
-
-.slide img{
-  height: 400px;
-}
-
-.recently{
-  width: 100%;
-}
-
-.recently img{
-  width: 59%;
-  position: relative;
-  left: 22%;
-  top: 5%;
-}
-
-.new{
-  width: 100%;
-  position: relative;
-  top: 6%;
-  float: left;
-}
-
-.new img{
-  width: 30%;
-  position:relative;
-  padding-left: 8px;
-  left: 0%;
-}
-
-.header a{
-  width: 59%;
-  position: relative;
-  font-size: 23px;
- }
-
-.illustration{
-  width: 100%;
-}
-
-.illustration img{
-  width: 59%;
-  position: relative;
-  left: 21%;
-}
-
-.one{
-  width: 100%;
-}
-
-.one img{
-  width: 30%;
-  position: relative;
-  left: 0%;
-}
-
-.photo{
-  width: 100%;
-}
-
-.photo img{
-  width: 59%;
-  position: relative;
-  left: 21%;
-}
-
-.two{
-  width: 100%;
-}
-
-.two img{
-  width: 30%;
-  position: relative;
-  left: 0%;
-}
-
-.film{
-  width: 100%;
-}
-
-.film img{
-  width: 59%;
-  position: relative;
-  left: 21%;
-}
-
-.video{
-  width: 100%;
-  position: relative;
-  top: 9%;
-}
-
-video{
-  width: 300px;
-  height: 200px;
-  float: left;
-  position: relative;
-  right: 7%;
-}
-
-.profile{
-  position: relative;
-  top: 15%
-}
-}
-
-@media screen and (max-width: 616px) {
-.slide{
-  height: 400px;
-  position: relative;
-  top: 5%;
-}
-
-.slide img{
-  height: 400px;
-}
-
-.recently{
-  width: 100%;
-}
-
-.recently img{
-  width: 59%;
-  position: relative;
-  left: 22%;
-  top: 5%;
-}
-
-.new{
-  width: 100%;
-  position: relative;
-  top: 6%;
-  float: left;
-}
-
-.new img{
-  width: 30%;
-  position:relative;
-  padding-left: 8px;
-  left: 0%;
-}
-
- .header a{
-  width: 59%;
-  position: relative;
-  font-size: 23px;
- }
-
-.illustration{
-  width: 100%;
-}
-
-.illustration img{
-  width: 59%;
-  position: relative;
-  left: 21%;
-}
-
-.one{
-  width: 100%;
-}
-
-.one img{
-  width: 30%;
-  position: relative;
-  left: 0%;
-}
-
-.photo{
-  width: 100%;
-}
-
-.photo img{
-  width: 59%;
-  position: relative;
-  left: 21%;
-}
-
-.two{
-  width: 100%;
-}
-
-.two img{
-  width: 30%;
-  position: relative;
-  left: 0%;
-}
-
-.film{
-  width: 100%;
-}
-
-.film img{
-  width: 59%;
-  position: relative;
-  left: 21%;
-}
-
-.video{
-  width: 100%;
-  position: relative;
-  top: 9%;
-}
-
-video{
-  width: 250px;
-  height: 200px;
-  float: left;
-  position: relative;
-  right: 7%;
-}
-
-.profile{
-  position: relative;
-  top: 15%
-}
-}
-
-@media screen and (max-width: 500px) {
-.wrapper{
   width: 100%;
   height: auto;
-  background-color: grey;
-  display: grid;
-  grid-template-columns: 3fr;
-  grid-template-areas:
-  "header"
-  "content"
-  "footer ";
-  grid-template-rows: 80px 2050px 200px;
-  }
-
-.slide{
-  width: 100%;
-  height: 400px;
   position: relative;
-  left: 0%;
-  top: 0%;
+  top: 9%;
+  display: flex;
+  justify-content: center;
 }
 
-.slide img{
-  width: 100%;
-  height: 400px;
-  left: -8%;
-  top: -8%;
-}
-
-.move{
-  position: relative;
-  left: 8%;
-}
-
-.recently{
-  width: 100%;
-  position: relative;
-  top: 7%;
-}
-
-.recently img{
-  width: 100%;
-  position: relative;
-  left: 0%;
-}
-
-.new{
-  width: 100%;
-  position: relative;
-  top: 7%;
+.clip1{
+  width: 562px;
+  height: auto;
   float: left;
 }
 
-.new img{
-  width: 31%;
-  position:relative;
-  padding-left: 5px;
-  left: 0%;
-}
-
-.header a{
-  position: relative;
-  font-size: 14px;
- }
-
-.header ul{
-  width: 78%;
-  position: relative;
-  left: 1%;
-}
-
-.illustration{
-  width: 100%;
-}
-
-.illustration img{
-  width: 100%;
-  position: relative;
-  left: 0%;
-}
-
-.web{
-  width: 100%;
-  height: 33%;
-  position: relative;
-  top: 0%;
-}
-
-.one{
-  width: 100%;
-}
-
-.one img{
-  width: 94%;
-  position: relative;
-  left: 1%;
-  padding-top: 10px;
-}
-
-.photo{
-  width: 100%;
-  position:relative;
-  top: 1%;
-}
-
-.photo img{
-  width: 100%;
-  position: relative;
-  left: 0%;
-}
-
-.picture{
-  width: 100%;
-  position: relative;
-  top: 1%;
-}
-
-.two{
-  width: 100%;
-}
-
-.two img{
-  width: 94%;
-  position: relative;
-  left: 1%;
-  padding-top: 10px;
-}
-
-.film{
-  width: 100%;
-  position: relative;
-  top: 4%;
-}
-
-.film img{
-  width: 100%;
-  position: relative;
-  left: 0%;
-  top: -1%;
-}
-
-.video{
-  width: 100%;
-  position: relative;
-  top: 7%;
+.text1{
+  width: 25%;
+  height: 375px;
+  float: left;
+  background-color: #a0a0a0;
 }
 
 video{
-  width: 300px;
-  height: 200px;
-  position: relative;
-  left: 10%;
-}
-
-.three{
-  width: 100%;
-  position: relative;
-  left: 0%;
-  top: -10%;
-}
-
-.profile{
-  position: absolute;
-  left: 17%;
-}
-
-.profile img{
-  width: 250px;
-}
-
-.profile h3{
-  font-size: 18px;
-  position: relative;
-  left: 17%;
-}
-
-.text{
-  width: 100%;
-  position: relative;
-  top: 28%;
-}
-
-.text h1{
-  font-size: 30px;
-}
-
-.text p{
-  font-size: 18px;
-}
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
 }
